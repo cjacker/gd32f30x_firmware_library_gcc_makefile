@@ -54,7 +54,7 @@ User/gd32f30x_it.c \
 User/main.c
 
 # ASM sources
-ASM_SOURCES = Firmware/startup_gd32f30x_hd.S
+ASM_SOURCES = Firmware/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.S
 
 
 #######################################
@@ -130,7 +130,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = Firmware/Link.ld
+LDSCRIPT = Firmware/Ld/Link.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
