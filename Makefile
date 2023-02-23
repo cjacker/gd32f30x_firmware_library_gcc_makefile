@@ -173,12 +173,8 @@ $(BUILD_DIR):
 #######################################
 # program
 #######################################
-program_openocd:
+program:
 	openocd -f /usr/share/openocd/scripts/interface/cmsis-dap.cfg -f /usr/share/openocd/scripts/target/stm32f4x.cfg -c "program build/$(TARGET).elf verify reset exit"
-
-program_pyocd:
-	pyocd erase -c -t gd32f450zg --config pyocd.yaml
-	pyocd load build/$(TARGET).hex -t gd32f450zg --config pyocd.yaml
 
 #######################################
 # clean up
